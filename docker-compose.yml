@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  flemmix-scraper:
+    build: .
+    container_name: flemmix-scraper
+    restart: unless-stopped
+    environment:
+      - CRON_SCHEDULE=0 4 * * *
+      - OUTPUT_DIR=/media/streaming
+      - TZ=Europe/Paris
+      # - EXTRA_ARGS=--verbose --limit 50
+    volumes:
+      - /mnt/Divers/Videos/flemmix-streaming:/media/streaming
