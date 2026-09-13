@@ -1,4 +1,3 @@
-cat > /app/flemmix-scraper-v7.py << 'PYTHON_EOF'
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -323,4 +322,3 @@ async def main():
 if __name__ == "__main__":
     try:    sys.exit(asyncio.run(main()))
     except KeyboardInterrupt: print("\nInterruption."); sys.exit(1)
-PYTHON_EOF
